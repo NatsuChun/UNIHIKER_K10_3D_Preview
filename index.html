@@ -57,9 +57,15 @@
   </style>
 </head>
 <body>
-    Loading model...
-    0%
-  <model-viewer 
+  <div id="loading">
+​    <div>Loading model...</div>
+​    <div id="progress-bar">
+      <div id="progress-bar-inner"></div>
+​    </div>
+​    <div id="progress-text">0%</div>
+</div>
+​
+<model-viewer 
     src="https://natsuchun.github.io/UNIHIKER_K10_3D_Preview/UNIHIKER_K10_EN.glb"
     camera-controls
     zoom-camera
