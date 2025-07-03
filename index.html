@@ -57,35 +57,25 @@
   </style>
 </head>
 <body>
-  <div id="loading">
-    <div>Loading model...</div>
-    <div id="progress-bar">
-      <div id="progress-bar-inner"></div>
-    </div>
-    <div id="progress-text">0%</div>
-  </div>
-
+    Loading model...
+    0%
   <model-viewer 
-    src="https://natsuchun.github.io/UNIHIKER_K10_3D_Preview
-/UNIHIKER_K10_EN.glb"
+    src="https://natsuchun.github.io/UNIHIKER_K10_3D_Preview/UNIHIKER_K10_EN.glb"
     camera-controls
     zoom-camera
     touch-action="pinch-zoom"
     interaction-prompt="none"
     tone-mapping="neutral"
-    
     auto-rotate
     exposure="1"
     environment-image="neutral"
     id="modelViewer">
   </model-viewer>
-
   <script>
     const modelViewer = document.getElementById('modelViewer');
     const loadingBox = document.getElementById('loading');
     const progressBar = document.getElementById('progress-bar-inner');
     const progressText = document.getElementById('progress-text');
-
     modelViewer.addEventListener('progress', (event) => {
       if (event.detail.totalProgress && event.detail.totalProgress < 1) {
         const percent = Math.round(event.detail.totalProgress * 100);
@@ -93,7 +83,6 @@
         progressText.textContent = `${percent}%`;
       }
     });
-
     modelViewer.addEventListener('load', () => {
       loadingBox.style.display = 'none';
     });
