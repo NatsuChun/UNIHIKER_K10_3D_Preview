@@ -65,14 +65,13 @@
     <div id="progress-text">0%</div>
   </div>
 
-  <model-viewer 
+  <model-viewer
     src="https://natsuchun.github.io/UNIHIKER_K10_3D_Preview/UNIHIKER_K10_EN.glb"
     camera-controls
     zoom-camera
     touch-action="pinch-zoom"
     interaction-prompt="none"
     tone-mapping="neutral"
-    
     auto-rotate
     exposure="1"
     environment-image="neutral"
@@ -88,8 +87,8 @@
     modelViewer.addEventListener('progress', (event) => {
       if (event.detail.totalProgress && event.detail.totalProgress < 1) {
         const percent = Math.round(event.detail.totalProgress * 100);
-        progressBar.style.width = `${percent}%`;
-        progressText.textContent = `${percent}%`;
+        progressBar.style.width = ${percent}%;
+        progressText.textContent = ${percent}%;
       }
     });
 
