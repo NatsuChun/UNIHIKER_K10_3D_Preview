@@ -13,7 +13,7 @@
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
     }
-    model-viewer {
+​    model-viewer {
       width: 100vw;
       height: 100vh;
       background-color: #fff;
@@ -55,7 +55,7 @@
       color: #666;
     }
   </style>
-</head>
+​</head>
 <body>
   <div id="loading">
 ​    <div>Loading model...</div>
@@ -64,8 +64,8 @@
 ​    </div>
 ​    <div id="progress-text">0%</div>
 </div>
-​
-<model-viewer 
+ 
+​ <model-viewer 
     src="https://natsuchun.github.io/UNIHIKER_K10_3D_Preview/UNIHIKER_K10_EN.glb"
     camera-controls
     zoom-camera
@@ -77,7 +77,8 @@
     environment-image="neutral"
     id="modelViewer">
   </model-viewer>
-  <script>
+​
+​  <script>
     const modelViewer = document.getElementById('modelViewer');
     const loadingBox = document.getElementById('loading');
     const progressBar = document.getElementById('progress-bar-inner');
@@ -95,3 +96,4 @@
   </script>
 </body>
 </html>
+​
